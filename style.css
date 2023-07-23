@@ -1,0 +1,17 @@
+.container{
+    padding: 0.2em;
+    margin: 10em;
+    background-color: black;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    flex-wrap: wrap;
+}
+
+.blocks{
+    background-color: aqua;
+    padding: 0;
+    border-style: solid;
+    flex: auto;
+    box-sizing: border-box;
+}
