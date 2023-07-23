@@ -1,6 +1,5 @@
 .container{
     padding: 0.2em;
-    margin: 10em;
     background-color: black;
     display: flex;
     width: 400px;
@@ -14,4 +13,22 @@
     border-style: solid;
     flex: auto;
     box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.header{
+    text-align: center;
+}
+
+.settings{
+    align-self: flex-start;
+    background-color: green;
+    height: 400px;
 }

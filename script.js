@@ -1,5 +1,5 @@
 function drawGrid() {
-    const divs = 16;
+    const divs = 4;
     let width = (400 / divs) / 400 * 100;
     const styleSheet = document.styleSheets[0];
     styleSheet.insertRule(`.blocks { width: ${width}%; }`, styleSheet.cssRules.length);
