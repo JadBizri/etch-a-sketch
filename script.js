@@ -1,8 +1,7 @@
-function drawGrid(divs = 16) {
-    // Clear the existing grid
-    const container = document.querySelector(".container");
-    container.innerHTML = '';
+const container = document.querySelector(".container"); //grid container
 
+function drawGrid(divs = 16) {
+    container.innerHTML = ''; // Clear the existing grid
     let width = (400 / divs) / 400 * 100; //to hold width of each div container
 
     //adjust width and height as needed

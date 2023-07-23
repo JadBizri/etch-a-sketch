@@ -73,7 +73,7 @@ input[type="color"] {
     transition: transform 0.1s ease-in-out;
 }
 
-.grid-size{
+.grid-size {
     font-size: 28px;
     padding: 0.5em;
     display: flex;
@@ -82,28 +82,28 @@ input[type="color"] {
     gap: 15px;
 }
 
-.slide-container{
+.slide-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.grid-size p{
+.grid-size p {
     font-size: small;
 }
 
-.warning{
+.warning {
     margin: 0;
     text-align: center;
     font-size: 18px;
 }
 
-.grid-container{
+.grid-container {
     max-width: 500px;
 }
 
-.footer{
+.footer {
     position: absolute;
     bottom: 0;
     display: flex;
@@ -113,6 +113,35 @@ input[type="color"] {
     width: 100%;
     padding: 5px;
 }
-#github{
+
+#github {
     color: #3366CC;
+}
+
+.r {
+    color: red;
+}
+
+.a {
+    color: orange;
+}
+
+.i {
+    color: yellow;
+}
+
+.n {
+    color: green;
+}
+
+.b {
+    color: blue;
+}
+
+.o {
+    color: indigo;
+}
+
+.w {
+    color: violet;
 }
