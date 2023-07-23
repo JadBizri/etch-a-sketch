@@ -1,4 +1,4 @@
-function drawGrid(divs) {
+function drawGrid(divs = 16) {
     // Clear the existing grid
     const container = document.querySelector(".container");
     container.innerHTML = '';
@@ -18,8 +18,6 @@ function drawGrid(divs) {
     }
 }
 
-drawGrid(16);
-
 let slider = document.getElementById("myRange");
 let output = document.getElementById("size"); //to show current grid size
 output.innerHTML = `${slider.value}x${slider.value}`; // Display the default slider value
@@ -34,3 +32,5 @@ let applyButton = document.getElementById("apply-button");
 applyButton.onclick = function(){
     drawGrid(slider.value);
 }
+
+drawGrid(); //default size 16
