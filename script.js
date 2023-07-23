@@ -1,10 +1,12 @@
 const DEFAULT_SIZE = 16;
 const DEFAULT_COLOR = '#000000';
 const DEFAULT_MODE = 'color';
+const rainbowColors = ["#FF0000", "#FFA500", "#FFFF00", "#008000", "#0000FF", "#4B0082", "#7F00FF"]; //to hold rainbow color values in order
 
-let currentColor = DEFAULT_COLOR
-let currentMode = DEFAULT_MODE
-let currentSize = DEFAULT_SIZE
+let currentRainbowColor = -1; //to rainbow color index
+let currentColor = DEFAULT_COLOR;
+let currentMode = DEFAULT_MODE;
+let currentSize = DEFAULT_SIZE;
 
 //function to set new color
 function setCurrentColor(newColor) {
@@ -36,6 +38,10 @@ rainbowButton.onclick = () => setCurrentMode('rainbow'); //user choose rainbow m
 randomButton.onclick = () => setCurrentMode('random'); //user choose random mode
 eraserButton.onclick = () => setCurrentMode('eraser'); //user choose eraser mode
 clearButton.onclick = () => drawGrid(currentSize); //user choose clear
+
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
 
 let slider = document.getElementById("myRange"); //slider
 let output = document.getElementById("size"); //to show current grid size
@@ -88,9 +94,12 @@ function changeColor(e) {
         e.target.style.backgroundColor = currentColor;
     } else if (currentMode === 'eraser') {
         e.target.style.backgroundColor = '#ffffff';
+    } else if (currentMode === 'rainbow') {
+        e.target.style.backgroundColor = getNextRainbowColor();
     }
 }
 
+//function that 'activates' new button when clicked
 function activateButton(newMode) {
     if (currentMode === 'rainbow') {
         rainbowButton.classList.remove('active');
@@ -111,6 +120,15 @@ function activateButton(newMode) {
     } else if (newMode === 'random') {
         randomButton.classList.add('active');
     }
+}
+
+//function that returns the next rainbow color in order
+function getNextRainbowColor(){
+    if(currentRainbowColor === 6){
+        currentRainbowColor = -1;
+    }
+    currentRainbowColor++;
+    return rainbowColors[currentRainbowColor];
 }
 
 window.onload = () => {
