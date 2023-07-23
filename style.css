@@ -3,13 +3,18 @@ html {
     background-color: #D3D3D3;
 }
 
+.settings,
+.container,
+.grid-container{
+    height: 500px;
+    max-width: 500px;
+}
+
 .container {
     padding: 0.2em;
     background-color: black;
     display: flex;
     min-width: 500px;
-    max-width: 500px;
-    height: 500px;
     flex-wrap: wrap;
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -42,7 +47,6 @@ html {
 .settings {
     box-sizing: border-box;
     align-self: flex-start;
-    height: 500px;
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -99,10 +103,6 @@ input[type="color"] {
     font-size: 18px;
 }
 
-.grid-container {
-    max-width: 500px;
-}
-
 .footer {
     position: absolute;
     bottom: 0;
@@ -144,4 +144,15 @@ input[type="color"] {
 
 .w {
     color: violet;
+}
+
+.settings .active{
+    background-color: white;
+    color: black;
+}
+
+#color-picker{
+    width: 150px;
+    height: 60px;
+    align-self: center;
 }
